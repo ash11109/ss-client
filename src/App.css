@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #00234D;
+  --secondary-color: #F76B6A;
+
+  --btn-primary-border-radius: 0.25rem;
+  --btn-primary-color: #fff;
+  --btn-primary-background-color: #00234D;
+  --btn-primary-border-color: #00234D;
+  --btn-primary-hover-color: #fff;
+  --btn-primary-background-hover-color: #00234D;
+  --btn-primary-border-hover-color: #00234D;
+  --btn-primary-font-weight: 500;
+
+  --btn-secondary-border-radius: 0.25rem;
+  --btn-secondary-color: #00234D;
+  --btn-secondary-background-color: transparent;
+  --btn-secondary-border-color: #00234D;
+  --btn-secondary-hover-color: #fff;
+  --btn-secondary-background-hover-color: #00234D;
+  --btn-secondary-border-hover-color: #00234D;
+  --btn-secondary-font-weight: 500;
+
+  --heading-color: #000;
+  --heading-font-family: 'Poppins', sans-serif;
+  --heading-font-weight: 700;
+
+  --title-color: #000;
+  --title-font-family: 'Poppins', sans-serif;
+  --title-font-weight: 400;
+
+  --body-color: #000;
+  --body-background-color: #fff;
+  --body-font-family: 'Poppins', sans-serif;
+  --body-font-size: 14px;
+  --body-font-weight: 400;
+
+  --section-heading-color: #000;
+  --section-heading-font-family: 'Poppins', sans-serif;
+  --section-heading-font-size: 48px;
+  --section-heading-font-weight: 600;
+
+  --section-subheading-color: #000;
+  --section-subheading-font-family: 'Poppins', sans-serif;
+  --section-subheading-font-size: 16px;
+  --section-subheading-font-weight: 400;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.slick-dots.slick-thumb {
+  position: absolute;
+  top: 0;
+  left:30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.slick-dots.slick-thumb li {
+  width: 66px;
+  height: 66px;
+  margin: 0 3px;
+  border-radius: 25px;
+  transition: all 0.5s ease-in-out;
+  will-change: width;
+  background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slider-container {
+  height: 600px;
+  width: 600px;
+}
+
+/* .slick-dots.slick-thumb li.slick-active {
+
+} */
+
+.gc-container {
+  margin-top: 20px;
+}
+.gc-container > h4 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.gc-container-body {
+  display: flex;
+}
+
+.gc-container-card {
+  margin-right: 10px;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
 }
