@@ -13,6 +13,7 @@ import Term from './pages/Term';
 import Privacy from './pages/Privacy';
 import ProductDetail from './pages/ProductDetail';
 import Products from './pages/Products';
+import OrderPlaced from './pages/OrderPlaced';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -86,7 +87,7 @@ function App() {
     getProductList();
     getCategoryList();  
 
-  },[]);
+  },[API]);
 
 
   return (
@@ -107,6 +108,7 @@ function App() {
               <Route path="term" element={<Term />} />
               <Route path="privacy" element={<Privacy />} />
               <Route path="terms" element={<Term />} />
+              <Route path="orderplaced" element={<OrderPlaced />} /> 
               <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>

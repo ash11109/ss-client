@@ -108,7 +108,7 @@ const Checkout = () => {
                                 <div className="shipping-address-area billing-area">
                                     <div className="minicart-btn-area d-flex align-items-center justify-content-between flex-wrap">
                                         <Link to="/cart" className="checkout-page-btn minicart-btn btn-secondary">BACK TO CART</Link>
-                                        <Link to="/" className="checkout-page-btn minicart-btn btn-primary">PROCEED TO SHIPPING</Link>
+                                        <Link to="/orderplaced" className="checkout-page-btn minicart-btn btn-primary">PROCEED TO SHIPPING</Link>
                                     </div>
                                 </div>
                             </div>
