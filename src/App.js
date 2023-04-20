@@ -1,6 +1,8 @@
 import './App.css';
+import './assets/css/vendor.css';
+import './assets/css/style.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./component/Navbar";
+import SNavbar from "./component/SNavbar";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import About from './pages/About';
@@ -22,8 +24,8 @@ export const ashContext = createContext();
 
 function App() {
 
-  const BACKEND = 'https://jbs.sysrootsolution.com/';
-  // const BACKEND = 'http://localhost/shachi/';
+  // const BACKEND = 'https://jbs.sysrootsolution.com/';
+  const BACKEND = 'http://localhost/shachi/';
   
   const API = BACKEND+'api/' ;
   const IMG = BACKEND ;
@@ -95,7 +97,7 @@ function App() {
       <ashContext.Provider value={{ API , IMG , productList , categoryList , cart , addToCart , removeFromCart }}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Navbar />}>
+            <Route path="/" element={<SNavbar />}>
               <Route index element={<Home />} />
               <Route path="login" element={<Login />}/>
               <Route path="register" element={<Register />} />

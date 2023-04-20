@@ -1,8 +1,7 @@
 import '../App.css';
 import { Link } from "react-router-dom";
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
+import errorImg from '../assets/img/error/error.png';
 
 const NoPage = () => {
     return (
@@ -16,7 +15,7 @@ const NoPage = () => {
                 <div className="container">
                     <div className="error-content text-center">
                         <div className="error-img mx-auto">
-                            <img src="assets/img/error/error.png" alt="error"/>
+                            <img src={errorImg} alt="error"/>
                         </div>
                         <p className="error-subtitle">Page Not Found</p>
                         <Link to="/" className="btn-primary mt-4">BACK TO HOMEPAGE</Link>
@@ -26,8 +25,6 @@ const NoPage = () => {
         </main>
 
         <Footer/>
-        <Drawermenu/>
-        <SideCart/>
         </div>
         </>
     )

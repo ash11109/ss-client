@@ -1,6 +1,4 @@
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { ashContext } from '../App';
@@ -168,8 +166,6 @@ const Checkout = () => {
         </main>
 
         <Footer/>
-        <Drawermenu/>
-        <SideCart/>
         </>
     );
 }

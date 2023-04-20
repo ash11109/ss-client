@@ -1,7 +1,5 @@
 import '../App.css';
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
 import { ChatRightHeart, Geo, Phone } from 'react-bootstrap-icons';
 
 const Contact = () => {
@@ -103,8 +101,6 @@ const Contact = () => {
         </main>
 
         <Footer/>
-        <Drawermenu/>
-        <SideCart/>
         </>
     );
 }

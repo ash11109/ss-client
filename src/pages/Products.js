@@ -1,10 +1,8 @@
 import '../App.css';
 import { useParams } from "react-router-dom";
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
 import ProductList from '../component/ProductList';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { ashContext } from '../App';
 
 const Products = () => {
@@ -24,7 +22,8 @@ const Products = () => {
                             <div className="filter-sort-wrapper d-flex justify-content-between flex-wrap">
                                 <div className="collection-title-wrap d-flex align-items-end">
                                     <h2 className="collection-title heading_24 mb-0">All products - 
-                                        { categoryList.find( data => data.cat_id === type ).catname }
+                                        { categoryList.length !== 0 ? 
+                                            categoryList.find( data => data.cat_id === type ).catname : '' }
                                     </h2>
                                     <p className="collection-counter text_16 mb-0 ms-2"></p>
                                 </div>
@@ -46,8 +45,6 @@ const Products = () => {
 
 
             <Footer/>
-            <Drawermenu/>
-            <SideCart/>
         </>
     );
 };

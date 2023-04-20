@@ -1,8 +1,7 @@
 import '../App.css';
+import opImg from '../assets/img/op.png';
 import { Link } from "react-router-dom";
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
 
 const OrderPlaced = () => {
     return (
@@ -16,7 +15,7 @@ const OrderPlaced = () => {
                 <div className="container">
                     <div className="error-content text-center">
                         <div className="error-img mx-auto">
-                            <img src="assets/img/op.png" alt="img"/>
+                            <img src={opImg} alt="img"/>
                         </div>
                         {/* <p className="error-subtitle">Order Placed</p> */}
                         <br></br>
@@ -38,8 +37,6 @@ const OrderPlaced = () => {
         </main>
 
         <Footer/>
-        <Drawermenu/>
-        <SideCart/>
         </div>
         </>
     )

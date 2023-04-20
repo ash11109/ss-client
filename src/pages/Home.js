@@ -1,7 +1,5 @@
 import '../App.css';
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
 import Popularproduct from '../component/Popularproduct';
 import Categorywiseproduct from '../component/Categorywiseproduct';
 
@@ -14,8 +12,6 @@ const Home = () => {
         <Categorywiseproduct/>
         <Popularproduct/>
         <Footer/>
-        <Drawermenu/>
-        <SideCart/>
         
     </div>
     </>

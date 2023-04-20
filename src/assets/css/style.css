@@ -1,29 +1,8 @@
 @charset "UTF-8";
 /*
 Theme Name: Bisum - Multipurpose eCommerce Template
-Theme URI: https://spreethemesprevious.github.io/bisum/
-Author: Spree Themes
-Author URI: https://themeforest.net/user/spreethemes/portfolio
-Description: Bisum – eCommerce HTML template is a clean, modern and well organized template. It's suitable for all store and this template can be easily customized.
-Version: 1.0.1
-*/
-/*============================================================================
-  Prefix mixin for generating vendor prefixes:
-  Usage:
-    // Input:
-    .element {
-      @include prefix(transform, scale(1), ms webkit spec);
-    }
-
-    // Output:
-    .element {
-      -ms-transform: scale(1);
-      -webkit-transform: scale(1);
-      transform: scale(1);
-    }
-
-  Based on https://github.com/thoughtbot/bourbon/blob/master/app/assets/stylesheets/addons/_prefixer.scss
 ==============================================================================*/
+
 iframe {
   width: 100%; }
 
@@ -710,10 +689,10 @@ button,
       flex: 0 0 50px; }
 
 .navbar {
-  padding: 0; }
+  padding: 10px; }
 
 .nav-link {
-  color: #000;
+  color: #000000;
   font-weight: 500;
   font-size: 15px; }
 
@@ -1490,8 +1469,7 @@ img.single-banner-img {
   padding-top: 60px;
   padding-bottom: 60px; }
 
-.promotinal-product-section {
-  background: url("../img/banner/tools-bg.jpg") no-repeat center center/cover; }
+
 
 .promotinal-product-section > div {
   position: relative;
@@ -2565,7 +2543,6 @@ blockquote {
   opacity: 0.6; }
 
 .action-count {
-  background-image: url("../../assets/img/about/count-bg.png");
   background-size: contain;
   background-repeat: no-repeat;
   min-width: 63px;
@@ -2788,7 +2765,6 @@ blockquote {
   border-radius: 4px; }
 
 .about-banner {
-  background-image: url("../../assets/img/about/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
@@ -3528,7 +3504,14 @@ blockquote {
     flex-direction: column;
     height: 100%;
     overflow: hidden; }
-  .navbar-nav .dropdown-menu {
+
+
+
+
+
+
+
+  /* .navbar-nav .dropdown-menu {
     position: fixed;
     border: none;
     top: 0;
@@ -3587,7 +3570,12 @@ blockquote {
     background-color: #fff; }
     .submenu-transform.active {
       -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
+      transform: translate3d(0, 0, 0); } */
+
+
+
+
+
   .menu-list-item {
     padding: 0.8rem 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
@@ -3611,7 +3599,7 @@ blockquote {
     -webkit-justify-content: space-between;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
+    justify-content: space-between; } 
   .slide-text {
     font-size: 28px; }
   .slide-heading {

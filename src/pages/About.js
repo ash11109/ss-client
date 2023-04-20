@@ -1,7 +1,6 @@
 import '../App.css';
+import aboutImg from '../assets/img/about/about-hero.jpg';
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
 
 const About = () => {
     return (
@@ -46,7 +45,7 @@ const About = () => {
                             </div>
                             <div className="col-lg-6 col-md-12 col-12">
                                 <div className="about-hero-img">
-                                    <img src="assets/img/about/about-hero.jpg" alt="img" />
+                                    <img src={aboutImg} alt="img" />
                                 </div>
                             </div>
                         </div>
@@ -58,8 +57,6 @@ const About = () => {
 
 
         <Footer/>
-        <Drawermenu/>
-        <SideCart/>
 
         </div>
 

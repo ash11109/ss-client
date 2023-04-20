@@ -1,7 +1,5 @@
 import '../App.css';
 import Footer from '../component/Footer';
-import Drawermenu from '../component/Drawermenu';
-import SideCart from '../component/SideCart';
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import FaQCard from '../component/FaQCard';
@@ -52,8 +50,6 @@ const Privacy = () => {
                 </div>         
             </main>
             <Footer/>
-            <Drawermenu/>
-            <SideCart/>
 
 
         </>
