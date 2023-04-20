@@ -98,7 +98,7 @@
   box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
 }
 
-/* side cart css  */
+
 .menu-bars {
   font-size: 2rem;
 }
@@ -150,8 +150,8 @@
 }
 
 .cart-box {
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none;  /* Firefox */
+-ms-overflow-style: none;
+scrollbar-width: none;
 }
 
 .cart-line {
@@ -167,7 +167,6 @@ scrollbar-width: none;  /* Firefox */
   }
 }
 
-/* footer by ash */
 
 .footer-ash {
   width: 99vw;
