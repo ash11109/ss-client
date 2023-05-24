@@ -24,8 +24,8 @@ export const ashContext = createContext();
 
 function App() {
 
-  const BACKEND = 'https://jbs.sysrootsolution.com/';
-  // const BACKEND = 'http://localhost/shachi/';
+  // const BACKEND = 'https://jbs.sysrootsolution.com/';
+  const BACKEND = 'http://localhost/shachi/';
   
   const API = BACKEND+'api/' ;
   const IMG = BACKEND ;

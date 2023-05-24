@@ -5,7 +5,7 @@ import Topbar from "./Topbar";
 import { Bag } from "react-bootstrap-icons";
 import { useContext, useState } from "react";
 import { ashContext } from "../App";
-import { Container , Nav , Navbar , NavDropdown} from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const SNavbar = () => {
   const [sidebar, setSidebar] = useState(false);
@@ -35,7 +35,6 @@ const SNavbar = () => {
       <Topbar />
 
       <header className="sticky-header border-btm-black header-1">
-      
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
           <Container>
             <Navbar.Brand>
@@ -51,16 +50,23 @@ const SNavbar = () => {
                     Home
                   </Link>
                 </Nav>
-                <NavDropdown title="Categories" className="menu-list-item nav-item" id="basic-nav-dropdown">
+                {/* <NavDropdown
+                  title="Categories"
+                  className="menu-list-item nav-item"
+                  id="basic-nav-dropdown"
+                >
                   {categoryList.map((item) => (
-                    <NavDropdown.Item key={item.cat_id}
+                    <NavDropdown.Item
+                      key={item.cat_id}
                       className="nav-link-sub nav-text-sub"
                       to={"/products/" + item.cat_id}
                       as={Link}
-                    > {item.catname}
+                    >
+                      {" "}
+                      {item.catname}
                     </NavDropdown.Item>
                   ))}
-                </NavDropdown>
+                </NavDropdown> */}
                 <Nav className="menu-list-item nav-item">
                   <Link className="nav-link" to="/cart">
                     Cart
@@ -76,6 +82,149 @@ const SNavbar = () => {
                     Contact
                   </Link>
                 </Nav>
+
+                <NavDropdown
+                  title="Brands"
+                  className="menu-list-item nav-item"
+                  id="basic-nav-dropdown"
+                >
+                  <NavDropdown.Item>Shachi</NavDropdown.Item>
+                  <NavDropdown.Item>Shachi Heritage</NavDropdown.Item>
+                  <NavDropdown.Item>Elara</NavDropdown.Item>
+                  <NavDropdown.Item>Biaggio</NavDropdown.Item>
+                  <NavDropdown.Item>Struzzo</NavDropdown.Item>
+                  <NavDropdown.Item>Berlini</NavDropdown.Item>
+                </NavDropdown>
+
+                <NavDropdown
+                  title="Shopall"
+                  className="menu-list-item nav-item"
+                  id="basic-nav-dropdown"
+                >
+                  <NavDropdown
+                    title="Men's"
+                    className="menu-list-item nav-item"
+                    id="basic-nav-dropdown"
+                    drop="end"
+                  >
+                    <NavDropdown
+                      title="Bags’s"
+                      className="menu-list-item nav-item"
+                      id="basic-nav-dropdown"
+                    >
+                      {categoryList.map((item) => (
+                        <NavDropdown.Item
+                          key={item.cat_id}
+                          className="nav-link-sub nav-text-sub"
+                          to={"/products/" + item.cat_id}
+                          as={Link}
+                        >
+                          {" "}
+                          {item.catname}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                    <NavDropdown
+                      title="Wallet’s"
+                      className="menu-list-item nav-item"
+                      id="basic-nav-dropdown"
+                    >
+                      {categoryList.map((item) => (
+                        <NavDropdown.Item
+                          key={item.cat_id}
+                          className="nav-link-sub nav-text-sub"
+                          to={"/products/" + item.cat_id}
+                          as={Link}
+                        >
+                          {" "}
+                          {item.catname}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="Women's"
+                    className="menu-list-item nav-item"
+                    id="basic-nav-dropdown"
+                    drop="end"
+                  >
+                    <NavDropdown
+                      title="Wallet’s"
+                      className="menu-list-item nav-item"
+                      id="basic-nav-dropdown"
+                    >
+                      {categoryList.map((item) => (
+                        <NavDropdown.Item
+                          key={item.cat_id}
+                          className="nav-link-sub nav-text-sub"
+                          to={"/products/" + item.cat_id}
+                          as={Link}
+                        >
+                          {" "}
+                          {item.catname}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                    <NavDropdown
+                      title="Bags’s"
+                      className="menu-list-item nav-item"
+                      id="basic-nav-dropdown"
+                    >
+                      {categoryList.map((item) => (
+                        <NavDropdown.Item
+                          key={item.cat_id}
+                          className="nav-link-sub nav-text-sub"
+                          to={"/products/" + item.cat_id}
+                          as={Link}
+                        >
+                          {" "}
+                          {item.catname}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                  </NavDropdown>
+                  <NavDropdown
+                    title="Accessories"
+                    className="menu-list-item nav-item"
+                    id="basic-nav-dropdown"
+                    drop="end"
+                  >
+                    <NavDropdown
+                      title="Belt’s"
+                      className="menu-list-item nav-item"
+                      id="basic-nav-dropdown"
+                    >
+                      {categoryList.map((item) => (
+                        <NavDropdown.Item
+                          key={item.cat_id}
+                          className="nav-link-sub nav-text-sub"
+                          to={"/products/" + item.cat_id}
+                          as={Link}
+                        >
+                          {" "}
+                          {item.catname}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                    <NavDropdown
+                      title="Others"
+                      className="menu-list-item nav-item"
+                      id="basic-nav-dropdown"
+                    >
+                      {categoryList.map((item) => (
+                        <NavDropdown.Item
+                          key={item.cat_id}
+                          className="nav-link-sub nav-text-sub"
+                          to={"/products/" + item.cat_id}
+                          as={Link}
+                        >
+                          {" "}
+                          {item.catname}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                  </NavDropdown>
+                </NavDropdown>
               </Nav>
               <Nav>
                 <Nav>
@@ -119,9 +268,7 @@ const SNavbar = () => {
                         </p>
                         <div className="misc d-flex align-items-end justify-content-between">
                           <div className="product-remove-area d-flex flex-column align-items-end">
-                            <div className="product-price">
-                              {item.price} Rs
-                            </div>
+                            <div className="product-price">{item.price} Rs</div>
                             <button
                               onClick={() => removeFromCart(item.id)}
                               className="product-remove"
