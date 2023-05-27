@@ -1,15 +1,15 @@
 import '../App.css';
 import { useParams } from "react-router-dom";
 import Footer from '../component/Footer';
-import ProductList from '../component/ProductList';
 import { useContext } from 'react';
 import { ashContext } from '../App';
+import SubCatList from '../component/SubCatList';
 
-const Products = () => {
+const SubCat = () => {
 
     const params = useParams();
     const {type} = params;
-    const { subCategoryList } = useContext(ashContext);
+    const { categoryList } = useContext(ashContext);
     
     return (
         <>
@@ -21,16 +21,16 @@ const Products = () => {
                         <div className="col-lg-12 col-md-12 col-12">
                             <div className="filter-sort-wrapper d-flex justify-content-between flex-wrap">
                                 <div className="collection-title-wrap d-flex align-items-end">
-                                    <h2 className="collection-title heading_24 mb-0">All products - 
-                                        { subCategoryList.length !== 0 ? 
-                                            subCategoryList.find( data => data.id === type ).catname : '' }
+                                    <h2 className="collection-title heading_24 mb-0"> 
+                                        { categoryList.length !== 0 ? 
+                                            categoryList.find( data => data.cat_id === type ).catname : '' }
                                     </h2>
                                     <p className="collection-counter text_16 mb-0 ms-2"></p>
                                 </div>
                             </div>
 
                             <div>
-                                <ProductList data={type}/>
+                                <SubCatList data={type}/>
                             </div>
                         </div>
 
@@ -49,4 +49,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default SubCat;

@@ -20,7 +20,7 @@ const CategoryCard = (props) => {
           </p>
           <div className="ash-catg-items-overlay"></div>
           <div className="ash-catg-items-button">
-            <Link className="ash-catg-items-link" to={"/products/"+props.data.cat_id} >
+            <Link className="ash-catg-items-link" to={"/subcat/"+props.data.cat_id} >
               EXPLORE
             </Link>
           </div>

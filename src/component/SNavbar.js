@@ -12,7 +12,7 @@ const SNavbar = () => {
 
   const showSidebar = () => setSidebar(!sidebar);
 
-  const { categoryList, cart } = useContext(ashContext);
+  const { categoryList, cart, subCategoryList } = useContext(ashContext);
 
   const { IMG, removeFromCart } = useContext(ashContext);
 
@@ -45,28 +45,60 @@ const SNavbar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
+
+
                 <Nav className="menu-list-item nav-item">
                   <Link className="nav-link" to="/">
                     Home
                   </Link>
                 </Nav>
-                {/* <NavDropdown
-                  title="Categories"
+
+
+                <NavDropdown
+                  title="Brands"
                   className="menu-list-item nav-item"
                   id="basic-nav-dropdown"
                 >
-                  {categoryList.map((item) => (
-                    <NavDropdown.Item
+                  <NavDropdown.Item>Shachi</NavDropdown.Item>
+                  <NavDropdown.Item>Shachi Heritage</NavDropdown.Item>
+                  <NavDropdown.Item>Elara</NavDropdown.Item>
+                  <NavDropdown.Item>Biaggio</NavDropdown.Item>
+                  <NavDropdown.Item>Struzzo</NavDropdown.Item>
+                  <NavDropdown.Item>Berlini</NavDropdown.Item>
+                </NavDropdown>
+
+
+                <NavDropdown
+                  title="Shopall"
+                  className="menu-list-item nav-item"
+                  id="basic-nav-dropdown"
+                >
+                  { categoryList.map((item) => (
+                    <NavDropdown
                       key={item.cat_id}
-                      className="nav-link-sub nav-text-sub"
-                      to={"/products/" + item.cat_id}
-                      as={Link}
+                      title={item.catname}
+                      className="menu-list-item nav-item"
+                      id="basic-nav-dropdown"
+                      drop="end"
                     >
-                      {" "}
-                      {item.catname}
-                    </NavDropdown.Item>
+                      { subCategoryList.map((item1) => (
+                        item.cat_id === item1.cat_id ? 
+                        <NavDropdown.Item
+                          key={item1.id}
+                          className="nav-link-sub nav-text-sub"
+                          to={"/products/" + item1.id}
+                          as={Link}
+                        >
+                          {" "}
+                          {item1.catname}
+                        </NavDropdown.Item>
+                        : ''
+                      ))}
+                    </NavDropdown>
                   ))}
-                </NavDropdown> */}
+                </NavDropdown>
+
+
                 <Nav className="menu-list-item nav-item">
                   <Link className="nav-link" to="/cart">
                     Cart
@@ -83,148 +115,8 @@ const SNavbar = () => {
                   </Link>
                 </Nav>
 
-                <NavDropdown
-                  title="Brands"
-                  className="menu-list-item nav-item"
-                  id="basic-nav-dropdown"
-                >
-                  <NavDropdown.Item>Shachi</NavDropdown.Item>
-                  <NavDropdown.Item>Shachi Heritage</NavDropdown.Item>
-                  <NavDropdown.Item>Elara</NavDropdown.Item>
-                  <NavDropdown.Item>Biaggio</NavDropdown.Item>
-                  <NavDropdown.Item>Struzzo</NavDropdown.Item>
-                  <NavDropdown.Item>Berlini</NavDropdown.Item>
-                </NavDropdown>
+                
 
-                <NavDropdown
-                  title="Shopall"
-                  className="menu-list-item nav-item"
-                  id="basic-nav-dropdown"
-                >
-                  <NavDropdown
-                    title="Men's"
-                    className="menu-list-item nav-item"
-                    id="basic-nav-dropdown"
-                    drop="end"
-                  >
-                    <NavDropdown
-                      title="Bags’s"
-                      className="menu-list-item nav-item"
-                      id="basic-nav-dropdown"
-                    >
-                      {categoryList.map((item) => (
-                        <NavDropdown.Item
-                          key={item.cat_id}
-                          className="nav-link-sub nav-text-sub"
-                          to={"/products/" + item.cat_id}
-                          as={Link}
-                        >
-                          {" "}
-                          {item.catname}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
-                    <NavDropdown
-                      title="Wallet’s"
-                      className="menu-list-item nav-item"
-                      id="basic-nav-dropdown"
-                    >
-                      {categoryList.map((item) => (
-                        <NavDropdown.Item
-                          key={item.cat_id}
-                          className="nav-link-sub nav-text-sub"
-                          to={"/products/" + item.cat_id}
-                          as={Link}
-                        >
-                          {" "}
-                          {item.catname}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="Women's"
-                    className="menu-list-item nav-item"
-                    id="basic-nav-dropdown"
-                    drop="end"
-                  >
-                    <NavDropdown
-                      title="Wallet’s"
-                      className="menu-list-item nav-item"
-                      id="basic-nav-dropdown"
-                    >
-                      {categoryList.map((item) => (
-                        <NavDropdown.Item
-                          key={item.cat_id}
-                          className="nav-link-sub nav-text-sub"
-                          to={"/products/" + item.cat_id}
-                          as={Link}
-                        >
-                          {" "}
-                          {item.catname}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
-                    <NavDropdown
-                      title="Bags’s"
-                      className="menu-list-item nav-item"
-                      id="basic-nav-dropdown"
-                    >
-                      {categoryList.map((item) => (
-                        <NavDropdown.Item
-                          key={item.cat_id}
-                          className="nav-link-sub nav-text-sub"
-                          to={"/products/" + item.cat_id}
-                          as={Link}
-                        >
-                          {" "}
-                          {item.catname}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
-                  </NavDropdown>
-                  <NavDropdown
-                    title="Accessories"
-                    className="menu-list-item nav-item"
-                    id="basic-nav-dropdown"
-                    drop="end"
-                  >
-                    <NavDropdown
-                      title="Belt’s"
-                      className="menu-list-item nav-item"
-                      id="basic-nav-dropdown"
-                    >
-                      {categoryList.map((item) => (
-                        <NavDropdown.Item
-                          key={item.cat_id}
-                          className="nav-link-sub nav-text-sub"
-                          to={"/products/" + item.cat_id}
-                          as={Link}
-                        >
-                          {" "}
-                          {item.catname}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
-                    <NavDropdown
-                      title="Others"
-                      className="menu-list-item nav-item"
-                      id="basic-nav-dropdown"
-                    >
-                      {categoryList.map((item) => (
-                        <NavDropdown.Item
-                          key={item.cat_id}
-                          className="nav-link-sub nav-text-sub"
-                          to={"/products/" + item.cat_id}
-                          as={Link}
-                        >
-                          {" "}
-                          {item.catname}
-                        </NavDropdown.Item>
-                      ))}
-                    </NavDropdown>
-                  </NavDropdown>
-                </NavDropdown>
               </Nav>
               <Nav>
                 <Nav>

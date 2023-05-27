@@ -18,6 +18,7 @@ import Products from './pages/Products';
 import OrderPlaced from './pages/OrderPlaced';
 import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
+import SubCat from './pages/SubCat';
 
 export const ashContext = createContext();
 
@@ -33,6 +34,7 @@ function App() {
   
   const [ productList , setProductList ] = useState([]);
   const [ categoryList , setCategoryList ] = useState([]);
+  const [ subCategoryList , setSubCategoryList ] = useState([]);
   const [ cart , setCart ] = useState([]);
   
 
@@ -85,16 +87,27 @@ function App() {
         ).then( res => setCategoryList(res.data.data) );
   
     }
+
+    const getSubCategoryList = () => {
+      
+      axios.postForm( API , 
+        {
+            "type": 5
+        }
+        ).then( res => setSubCategoryList(res.data.sdata) );
+  
+    }
     
     getProductList();
-    getCategoryList();  
+    getCategoryList();
+    getSubCategoryList();
 
   },[API]);
 
 
   return (
     <>
-      <ashContext.Provider value={{ API , IMG , productList , categoryList , cart , addToCart , removeFromCart }}>
+      <ashContext.Provider value={{ API , IMG , productList , categoryList , subCategoryList , cart , addToCart , removeFromCart }}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<SNavbar />}>
@@ -105,6 +118,7 @@ function App() {
               <Route path="cart" element={<Cart />} />
               <Route path="checkout" element={<Checkout />} />
               <Route path="products/:type" element={<Products />} />
+              <Route path="subcat/:type" element={<SubCat />} />
               <Route path="productDetail/:id" element={<ProductDetail />} />
               <Route path="contact" element={<Contact />} />
               <Route path="term" element={<Term />} />

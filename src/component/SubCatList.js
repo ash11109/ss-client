@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { ashContext } from "../App";
 import "../App.css";
-import ProductCard from "./ProductCard";
+import SubCategoryCard from "./SubCategoryCard";
 
-const ProductList = (props) => {
+const SubCatList = (props) => {
 
-  const { productList } = useContext(ashContext);
+  const { subCategoryList } = useContext(ashContext);
 
   return (
     <>
@@ -17,9 +17,8 @@ const ProductList = (props) => {
 
 
               {
-                productList.map((item,i)=> item.category === props.data ? <ProductCard data={item} key={i}/> : '' )
+                subCategoryList.map((item,i)=> item.cat_id === props.data ? <SubCategoryCard data={item} key={i}/> : '' )
               }
-
 
               </div>
             </div>
@@ -30,4 +29,4 @@ const ProductList = (props) => {
   );
 };
 
-export default ProductList;
+export default SubCatList;
