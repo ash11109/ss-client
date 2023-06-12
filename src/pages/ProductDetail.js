@@ -237,7 +237,7 @@ const ProductDetail = () => {
                 <h4>Frequently Asked Questions (FAQ) for Sachi Sparkers E-commerce Leather Company:</h4><br></br>
                 <div className="desc-content">
                 {
-                  faq.map( item => item.policyType === 'FaQ' ? 
+                  faq && faq.map( item => item.policyType === 'FaQ' ? 
                   <div key={item.id}>
                     <h4 className="heading_18 mb-3">{ item.title }</h4>
                     <p className="text_16 mb-4">{ item.content }</p>
